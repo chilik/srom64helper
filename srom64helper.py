@@ -1,7 +1,12 @@
+#Some fixes to load SecureRom into IDA 7.3
+#Put this in your loaders folder of IDA installation
+
+
 import idautils
 import idaapi
 import idc
 import struct
+import ida_search
 
 def find_panic(base_ea):
 	pk_ea = ida_search.find_text(base_ea, 1, 1, "double panic in ", ida_search.SEARCH_DOWN)
